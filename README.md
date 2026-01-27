@@ -1,3 +1,9 @@
+# AI-Powered Plastic Waste Segregation: From Hotspot Detection to Material Classification
+
+**Satellite-based plastic hotspot detection and AI-powered waste classification system**
+
+[![Live Earth Engine App](https://img.shields.io/badge/Google%20Earth%20Engine-Live%20App-4285F4?logo=googleearth&logoColor=white)](https://pegasus1723.users.earthengine.app/view/plastic-hotspot-viewer-india)
+
 ### 📁 Repository Overview
 
 This repository contains a comprehensive, multi-stage project for plastic waste segregation. It combines two core components: a satellite-based system for detecting large-scale plastic pollution hotspots in water bodies and a real-time, AI-powered system for on-the-ground waste classification.
@@ -15,6 +21,25 @@ The system uses Google Earth Engine (GEE) to process freely available Sentinel-2
 2.  **Water Masking**: The Normalized Difference Water Index (NDWI) is computed to segment land and water. Pixels with an NDWI greater than 0 are classified as water.
 3.  **Floating Debris Detection**: The Floating Debris Index (FDI) is calculated using the red, NIR, and SWIR bands to highlight potential plastic accumulations.
 4.  **Classification & Visualization**: The FDI is classified into low, medium, and high concentrations, which are then visualized on an interactive map using `geemap`. This approach achieved an NDWI accuracy of up to 0.90 and an FDI accuracy of 0.88 in experiments. It successfully flagged a small fraction of water areas as plastic hotspots, consistent with debris sinks.
+
+-----
+### 🌍 Live Deployment: Public Google Earth Engine App
+
+The satellite-based plastic hotspot detection module has been deployed as a **public Google Earth Engine web application**, allowing anyone to explore plastic pollution hotspots without requiring a Google Earth Engine account or login.
+
+🔗 **Live App (Public, No Login Required): [Google Earth Engine App](https://pegasus1723.users.earthengine.app/view/plastic-hotspot-viewer-india)**  
+
+**Key Features**
+- Interactive map visualizing floating plastic debris hotspots across India
+- Based on Sentinel-2 imagery processed directly in Google Earth Engine
+- Uses NDWI for water masking and Floating Debris Index (FDI) for hotspot detection
+- Color-coded intensity levels (Low, Medium, High plastic concentration)
+- Fully cloud-hosted and free for non-commercial use
+
+**Technical Notes**
+- The app performs on-demand computation using Google Earth Engine, so initial load time may be slightly longer depending on region and network conditions.
+- The deployment is non-commercial and intended for research, educational, and public awareness purposes.
+- Source code for the app corresponds to the satellite-based hotspot identification logic in this repository.
 
 -----
 
